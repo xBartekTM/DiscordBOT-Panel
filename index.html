@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+Wykonal Ksiadz Proboszcz xBartekTM
+<head>
+    <meta charset="utf-8"/>
+    <title>Panel</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-3">
+            <p class='border header'><img class="avatarIMG" src='./img/icon/clock.png'> Ostatnie Wiadomości</p>
+            <div class="scrollable" id="lastMessages"></div>
+            <button id="clearChat">♻ Wyczyść Chat</button>
+            <select id="guilds"></select><br>
+            <select id="channels"></select><br>
+            <textarea class='send' id="toSend" placeholder="Wpisz Wiadomość"></textarea><br>
+            <button class="blue" id="send">↩ Wyślij (ENTER)</button>
+        </div>
+        <div class="col-3">
+            <p class="border header" id='guildName'><img class="avatarIMG" src="./img/icon/info.png"> Informacje</p>
+            <div class="scrollable" id="guildInfo"></div>
+            <button class="red" id='leaveGuild'>🚪 Opuść Serwer</button>
+            <br>
+            <button class="blue" id='invite'>✉ Dodaj Bota</button>
+            <br><br>
+            <fieldset>
+                <legend>Auto-Scroll</legend>
+                <label class="switch">
+                    <input checked id="chk1" type="checkbox" value="last">
+                    <span class="slider round"></span>
+                </label>
+                <label for="last">Ostatnie Wiadomości</label><br/><br/>
+                <label class="switch">
+                    <input checked id="chk2" type="checkbox" value="chatCheck">
+                    <span class="slider round"></span>
+                </label>
+                <label for="chatCheck" id='channelNameLabel'>Chat</label><br/><br/>
+                <label class="switch">
+                    <input id="chk3" type="checkbox" value="animCheck">
+                    <span class="slider round"></span>
+                </label>
+                <label for="animCheck">Włącz animacje</label><br/><br/>
+            </fieldset>
+        </div>
+        <div class="col-6">
+            <p class="border header" id='channelName'><img class="avatarIMG" src='./img/icon/chat.png'> Chat</p>
+            <div class="scrollable" id="chat"></div>
+            <button class="red demi" id='refreshToken'>🔑 Zmień Token</button>
+            <button class="demi" id="btnrRefreshChat">🔁 Odśwież Chat</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/discord.12.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/panel.js"></script>
+</html>
